@@ -5,14 +5,19 @@ html{
 body{
     width: auto;
     height: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Indie Flower', cursive;
 }
-.container{
+.game-menu{
     align-items: center;
+    text-align: center;
 }
 
 h1{
     color:red;
+    text-align: center;
+}
+p{
+    color: yellow;
     text-align: center;
 }
 .keys{
@@ -20,15 +25,15 @@ h1{
     justify-content: center;
 }
 .key{
-    margin: 5px;
-    line-height: 175%;
+    margin: 10px;
+    line-height: 60px;
     background-color: red;
     text-align: center;
     -webkit-text-fill-color: white;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     border-style: solid;
-    border-color: greenyellow;
+    border-color: white;
     border-width: 5px;
     border-radius: 50%;
 
@@ -42,6 +47,23 @@ button{
     border-style: solid;
     border-color: green;
     border-width: 5px;
-    border-radius: 5px;
-    justify-content: center;
+    border-radius: 45%;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+.wrong-key-down{
+ border-color: salmon;
+ background-color: salmon;
+ transform:scale(1.15); 
+}
+.correct-key-down{
+    border-color: rgb(72, 255, 0);
+    background-color: rgb(72, 255, 0);
+    transform:scale(1.15); 
+}
+.fire-key{
+    border-color:orange;
+    background-color: orange;
+    transform:scale(1.15); 
 }
