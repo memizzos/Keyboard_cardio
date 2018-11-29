@@ -1,11 +1,14 @@
 body{
     background-color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
-line-height: 150px;
+line-height: 120px;
 text-align: center;
 }
-
+h1{
+    color:black;
+}
 .keys{
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +16,7 @@ text-align: center;
 }
 .key{
     margin: 5px;
-    line-height: 150%;
+    line-height: 175%;
     background-color: red;
     text-align: center;
     -webkit-text-fill-color: white;
@@ -29,5 +32,10 @@ text-align: center;
     width: 400px;
 }
 button{
-    
+    background-color: red;
+    color: white;
+    border-style: solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5px;
 }
