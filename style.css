@@ -1,17 +1,22 @@
+html{
+    background: url(http://167.114.240.11/fbl-2009/200903/33419515.jpg);
+    background-size: cover;
+}
 body{
-    background-color: aqua;
+    width: auto;
+    height: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
-line-height: 120px;
-text-align: center;
+    align-items: center;
 }
+
 h1{
-    color:black;
+    color:red;
+    text-align: center;
 }
 .keys{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 .key{
@@ -38,4 +43,5 @@ button{
     border-color: green;
     border-width: 5px;
     border-radius: 5px;
+    justify-content: center;
 }
