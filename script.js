@@ -24,13 +24,12 @@ console.log(getRandomKey());
 let firekey = buttonsKey[index].className;
 let firekeyRepeated;
 function getRandomFireKey(){
-
     firekey = "fire-key";
+    firekeyRepeated = firekey;
     if (firekey === firekeyRepeated){
-        console.log('The same key!!!!!!!!!!!!');
         return getRandomFireKey();
     }
-    firekey = firekeyRepeated;
+
 }
 getRandomFireKey();
 //Zad.dom
