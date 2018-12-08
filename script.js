@@ -21,9 +21,10 @@ function getRandomKey() {
 
 console.log(getRandomKey());
 
+let firekey = buttonsKey[index].className;
+let firekeyRepeated;
 function getRandomFireKey(){
-    let firekey = buttonsKey[index].className;
-    let firekeyRepeated;
+
     firekey = "fire-key";
     if (firekey === firekeyRepeated){
         console.log('The same key!!!!!!!!!!!!');
