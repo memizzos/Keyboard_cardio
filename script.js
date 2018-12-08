@@ -21,5 +21,9 @@ function getRandomKey() {
 
 console.log(getRandomKey());
 
+function getRandomFireKey(){
+    buttonsKey[index].className = "fire-key";
+}
+getRandomFireKey();
 //Zad.dom
 // stwórz funkcje która losowo do klawisza dodaje klase fire-key
