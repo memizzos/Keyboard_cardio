@@ -29,8 +29,7 @@ function getRandomFireKey(){
         console.log('The same key!!!!!!!!!!!!');
         return getRandomFireKey();
     }
-    firekeyRepeated = firekey;
-    return firekey;
+    firekey = firekeyRepeated;
 }
 getRandomFireKey();
 //Zad.dom
