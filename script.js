@@ -21,15 +21,14 @@ function getRandomKey() {
 
 console.log(getRandomKey());
 
-let firekey = buttonsKey[index].className;
+let firekey = document.getElementsByClassName("key")[index].className;
 let firekeyRepeated;
 function getRandomFireKey(){
     firekey = "fire-key";
-    firekeyRepeated = firekey;
     if (firekey === firekeyRepeated){
         return getRandomFireKey();
     }
-
+    firekeyRepeated = firekey;
 }
 getRandomFireKey();
 //Zad.dom
