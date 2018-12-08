@@ -22,7 +22,15 @@ function getRandomKey() {
 console.log(getRandomKey());
 
 function getRandomFireKey(){
-    buttonsKey[index].className = "fire-key";
+    let firekey = buttonsKey[index].className;
+    let firekeyRepeated;
+    firekey = "fire-key";
+    if (firekey === firekeyRepeated){
+        console.log('The same key!!!!!!!!!!!!');
+        return getRandomFireKey();
+    }
+    firekeyRepeated = firekey;
+    return firekey;
 }
 getRandomFireKey();
 //Zad.dom
