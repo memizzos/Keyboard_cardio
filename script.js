@@ -29,6 +29,7 @@ function getRandomFireKey(){
         return getRandomFireKey();
     }
     firekeyRepeated = firekey;
+    return firekey;
 }
 getRandomFireKey();
 //Zad.dom
