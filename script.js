@@ -21,10 +21,9 @@ function getRandomKey() {
 
 console.log(getRandomKey());
 
-let firekey = document.getElementsByClassName("key")[index].className;
+let firekey = buttonsKey[index].setAttribute("class", "key fire-key");
 
 function getRandomFireKey(){
-    firekey = "key" + " " + "fire-key";
     return firekey;
 }
 getRandomFireKey();
