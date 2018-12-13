@@ -12,7 +12,7 @@ function getRandomKey() {
    index = Math.floor(Math.random() * buttonsKey.length);
     const key = buttonsKey[index];
     if (key === lastKey){
-        console.log('The same key!!!!!!!!!!!!');
+        console.log('The same key!!!');
         return getRandomKey();
     }
     lastKey = key;
