@@ -22,13 +22,9 @@ function getRandomKey() {
 console.log(getRandomKey());
 
 let firekey = document.getElementsByClassName("key")[index].className;
-let firekeyRepeated;
+
 function getRandomFireKey(){
     firekey = "fire-key";
-    if (firekey === firekeyRepeated){
-        return getRandomFireKey();
-    }
-    firekeyRepeated = firekey;
     return firekey;
 }
 getRandomFireKey();
