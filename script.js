@@ -21,11 +21,9 @@ function getRandomKey() {
 
 console.log(getRandomKey());
 
-let firekey = buttonsKey[index].setAttribute("class", "key fire-key");
 
-function getRandomFireKey(){
-    return firekey;
+function peep(){
+    const time = getRandomNumber(1000, 2000);
+    const key = getRandomKey();
+    key.classList.add('fire-key');
 }
-getRandomFireKey();
-//Zad.dom
-// stwórz funkcje która losowo do klawisza dodaje klase fire-key
