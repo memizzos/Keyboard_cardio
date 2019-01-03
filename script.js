@@ -16,22 +16,17 @@ function getRandomKey() {
    index = Math.floor(Math.random() * buttonsKey.length);
     const key = buttonsKey[index];
     if (key === lastKey){
-        console.log('The same key!!!');
         return getRandomKey();
     }
     lastKey = key;
     return key;
 }
 
-console.log(getRandomKey());
-
-
 function peep(){
     const time = getRandomNumber(1000, 2000);
     const key = getRandomKey();
-    key.classList.add('fire-key');
+    addClassToElement('fire-key', key);
     currentKey = key;
-    console.log(currentKey.attributes[0]);
     setTimeout(() => {
         if (!OffGame) {peep()};
     }, time);
@@ -46,8 +41,7 @@ function addClassToElement(className, element){
 
 
 function removeClassFromElement(className, element){
-    time = getRandomNumber(1000, 2000);
-    setTimeout(element.classList.remove(className), time);
+    element.classList.remove(className);
 }
 
 
@@ -58,9 +52,12 @@ function showScore(){
 
 function endgame(){
     OffGame = true;
+    window.removeEventListener('keydown', checkKey);
+    menu.innerHTML = `Victory! You score: ${score}<button onclick="startGame()"><b>Play Again</b>`
 };
 
 function startGame(){
+    score = 0;
     showScore()
     window.addEventListener('keydown', checkKey);
     peep();
@@ -69,20 +66,18 @@ function startGame(){
 };
 
 function checkKey(event) {
-    if (event.keyCode == currentKey.attributes[0].value){
+    if (event.keyCode == currentKey.attributes[0].value) {
         score ++;
         removeClassFromElement('fire-key', currentKey);
         addClassToElement('correct-key-down', currentKey);
-        console.log(score);
     }
-    else{
+    else {
         score --;
         let wrongKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
-        console.log(score);
         addClassToElement('wrong-key-down', wrongKey);
     }
     scoreBoard.innerHTML = `Score: ${score}`;
     if (score == endScore) {
-        endgame()
+        endgame();
     }
 }
